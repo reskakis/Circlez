@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A26E8821F8B18F00075B9C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26E8811F8B18F00075B9C4 /* AppDelegate.swift */; };
+		5A26E8841F8B18F00075B9C4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A26E8831F8B18F00075B9C4 /* GameScene.sks */; };
+		5A26E8861F8B18F00075B9C4 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A26E8851F8B18F00075B9C4 /* Actions.sks */; };
+		5A26E8881F8B18F00075B9C4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26E8871F8B18F00075B9C4 /* GameScene.swift */; };
+		5A26E88A1F8B18F00075B9C4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26E8891F8B18F00075B9C4 /* GameViewController.swift */; };
+		5A26E88D1F8B18F00075B9C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A26E88B1F8B18F00075B9C4 /* Main.storyboard */; };
+		5A26E88F1F8B18F00075B9C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A26E88E1F8B18F00075B9C4 /* Assets.xcassets */; };
+		5A26E8921F8B18F00075B9C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A26E8901F8B18F00075B9C4 /* LaunchScreen.storyboard */; };
+		5A26E89D1F8B18F10075B9C4 /* CirclezTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26E89C1F8B18F10075B9C4 /* CirclezTests.swift */; };
+		5A26E8A81F8B18F10075B9C4 /* CirclezUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A26E8A71F8B18F10075B9C4 /* CirclezUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A26E8991F8B18F10075B9C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A26E8761F8B18F00075B9C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A26E87D1F8B18F00075B9C4;
+			remoteInfo = Circlez;
+		};
+		5A26E8A41F8B18F10075B9C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A26E8761F8B18F00075B9C4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A26E87D1F8B18F00075B9C4;
+			remoteInfo = Circlez;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A26E87E1F8B18F00075B9C4 /* Circlez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Circlez.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A26E8811F8B18F00075B9C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A26E8831F8B18F00075B9C4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5A26E8851F8B18F00075B9C4 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		5A26E8871F8B18F00075B9C4 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5A26E8891F8B18F00075B9C4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5A26E88C1F8B18F00075B9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A26E88E1F8B18F00075B9C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A26E8911F8B18F00075B9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A26E8931F8B18F00075B9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A26E8981F8B18F10075B9C4 /* CirclezTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CirclezTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A26E89C1F8B18F10075B9C4 /* CirclezTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclezTests.swift; sourceTree = "<group>"; };
+		5A26E89E1F8B18F10075B9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A26E8A31F8B18F10075B9C4 /* CirclezUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CirclezUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A26E8A71F8B18F10075B9C4 /* CirclezUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclezUITests.swift; sourceTree = "<group>"; };
+		5A26E8A91F8B18F10075B9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A26E87B1F8B18F00075B9C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A26E8951F8B18F10075B9C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A26E8A01F8B18F10075B9C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A26E8751F8B18F00075B9C4 = {
+			isa = PBXGroup;
+			children = (
+				5A26E8801F8B18F00075B9C4 /* Circlez */,
+				5A26E89B1F8B18F10075B9C4 /* CirclezTests */,
+				5A26E8A61F8B18F10075B9C4 /* CirclezUITests */,
+				5A26E87F1F8B18F00075B9C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A26E87F1F8B18F00075B9C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A26E87E1F8B18F00075B9C4 /* Circlez.app */,
+				5A26E8981F8B18F10075B9C4 /* CirclezTests.xctest */,
+				5A26E8A31F8B18F10075B9C4 /* CirclezUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A26E8801F8B18F00075B9C4 /* Circlez */ = {
+			isa = PBXGroup;
+			children = (
+				5A26E8811F8B18F00075B9C4 /* AppDelegate.swift */,
+				5A26E8831F8B18F00075B9C4 /* GameScene.sks */,
+				5A26E8851F8B18F00075B9C4 /* Actions.sks */,
+				5A26E8871F8B18F00075B9C4 /* GameScene.swift */,
+				5A26E8891F8B18F00075B9C4 /* GameViewController.swift */,
+				5A26E88B1F8B18F00075B9C4 /* Main.storyboard */,
+				5A26E88E1F8B18F00075B9C4 /* Assets.xcassets */,
+				5A26E8901F8B18F00075B9C4 /* LaunchScreen.storyboard */,
+				5A26E8931F8B18F00075B9C4 /* Info.plist */,
+			);
+			path = Circlez;
+			sourceTree = "<group>";
+		};
+		5A26E89B1F8B18F10075B9C4 /* CirclezTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A26E89C1F8B18F10075B9C4 /* CirclezTests.swift */,
+				5A26E89E1F8B18F10075B9C4 /* Info.plist */,
+			);
+			path = CirclezTests;
+			sourceTree = "<group>";
+		};
+		5A26E8A61F8B18F10075B9C4 /* CirclezUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A26E8A71F8B18F10075B9C4 /* CirclezUITests.swift */,
+				5A26E8A91F8B18F10075B9C4 /* Info.plist */,
+			);
+			path = CirclezUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A26E87D1F8B18F00075B9C4 /* Circlez */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A26E8AC1F8B18F10075B9C4 /* Build configuration list for PBXNativeTarget "Circlez" */;
+			buildPhases = (
+				5A26E87A1F8B18F00075B9C4 /* Sources */,
+				5A26E87B1F8B18F00075B9C4 /* Frameworks */,
+				5A26E87C1F8B18F00075B9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Circlez;
+			productName = Circlez;
+			productReference = 5A26E87E1F8B18F00075B9C4 /* Circlez.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A26E8971F8B18F10075B9C4 /* CirclezTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A26E8AF1F8B18F10075B9C4 /* Build configuration list for PBXNativeTarget "CirclezTests" */;
+			buildPhases = (
+				5A26E8941F8B18F10075B9C4 /* Sources */,
+				5A26E8951F8B18F10075B9C4 /* Frameworks */,
+				5A26E8961F8B18F10075B9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A26E89A1F8B18F10075B9C4 /* PBXTargetDependency */,
+			);
+			name = CirclezTests;
+			productName = CirclezTests;
+			productReference = 5A26E8981F8B18F10075B9C4 /* CirclezTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A26E8A21F8B18F10075B9C4 /* CirclezUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A26E8B21F8B18F10075B9C4 /* Build configuration list for PBXNativeTarget "CirclezUITests" */;
+			buildPhases = (
+				5A26E89F1F8B18F10075B9C4 /* Sources */,
+				5A26E8A01F8B18F10075B9C4 /* Frameworks */,
+				5A26E8A11F8B18F10075B9C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A26E8A51F8B18F10075B9C4 /* PBXTargetDependency */,
+			);
+			name = CirclezUITests;
+			productName = CirclezUITests;
+			productReference = 5A26E8A31F8B18F10075B9C4 /* CirclezUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A26E8761F8B18F00075B9C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Cory Reskakis";
+				TargetAttributes = {
+					5A26E87D1F8B18F00075B9C4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					5A26E8971F8B18F10075B9C4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5A26E87D1F8B18F00075B9C4;
+					};
+					5A26E8A21F8B18F10075B9C4 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5A26E87D1F8B18F00075B9C4;
+					};
+				};
+			};
+			buildConfigurationList = 5A26E8791F8B18F00075B9C4 /* Build configuration list for PBXProject "Circlez" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A26E8751F8B18F00075B9C4;
+			productRefGroup = 5A26E87F1F8B18F00075B9C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A26E87D1F8B18F00075B9C4 /* Circlez */,
+				5A26E8971F8B18F10075B9C4 /* CirclezTests */,
+				5A26E8A21F8B18F10075B9C4 /* CirclezUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A26E87C1F8B18F00075B9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A26E88D1F8B18F00075B9C4 /* Main.storyboard in Resources */,
+				5A26E8841F8B18F00075B9C4 /* GameScene.sks in Resources */,
+				5A26E88F1F8B18F00075B9C4 /* Assets.xcassets in Resources */,
+				5A26E8921F8B18F00075B9C4 /* LaunchScreen.storyboard in Resources */,
+				5A26E8861F8B18F00075B9C4 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A26E8961F8B18F10075B9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A26E8A11F8B18F10075B9C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A26E87A1F8B18F00075B9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A26E8881F8B18F00075B9C4 /* GameScene.swift in Sources */,
+				5A26E88A1F8B18F00075B9C4 /* GameViewController.swift in Sources */,
+				5A26E8821F8B18F00075B9C4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A26E8941F8B18F10075B9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A26E89D1F8B18F10075B9C4 /* CirclezTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A26E89F1F8B18F10075B9C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A26E8A81F8B18F10075B9C4 /* CirclezUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A26E89A1F8B18F10075B9C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A26E87D1F8B18F00075B9C4 /* Circlez */;
+			targetProxy = 5A26E8991F8B18F10075B9C4 /* PBXContainerItemProxy */;
+		};
+		5A26E8A51F8B18F10075B9C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A26E87D1F8B18F00075B9C4 /* Circlez */;
+			targetProxy = 5A26E8A41F8B18F10075B9C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A26E88B1F8B18F00075B9C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A26E88C1F8B18F00075B9C4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A26E8901F8B18F00075B9C4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A26E8911F8B18F00075B9C4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A26E8AA1F8B18F10075B9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A26E8AB1F8B18F10075B9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A26E8AD1F8B18F10075B9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Circlez/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reskakis.Circlez;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A26E8AE1F8B18F10075B9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Circlez/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reskakis.Circlez;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A26E8B01F8B18F10075B9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CirclezTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reskakis.CirclezTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Circlez.app/Circlez";
+			};
+			name = Debug;
+		};
+		5A26E8B11F8B18F10075B9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CirclezTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reskakis.CirclezTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Circlez.app/Circlez";
+			};
+			name = Release;
+		};
+		5A26E8B31F8B18F10075B9C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CirclezUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reskakis.CirclezUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Circlez;
+			};
+			name = Debug;
+		};
+		5A26E8B41F8B18F10075B9C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CirclezUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reskakis.CirclezUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Circlez;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A26E8791F8B18F00075B9C4 /* Build configuration list for PBXProject "Circlez" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A26E8AA1F8B18F10075B9C4 /* Debug */,
+				5A26E8AB1F8B18F10075B9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A26E8AC1F8B18F10075B9C4 /* Build configuration list for PBXNativeTarget "Circlez" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A26E8AD1F8B18F10075B9C4 /* Debug */,
+				5A26E8AE1F8B18F10075B9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A26E8AF1F8B18F10075B9C4 /* Build configuration list for PBXNativeTarget "CirclezTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A26E8B01F8B18F10075B9C4 /* Debug */,
+				5A26E8B11F8B18F10075B9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A26E8B21F8B18F10075B9C4 /* Build configuration list for PBXNativeTarget "CirclezUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A26E8B31F8B18F10075B9C4 /* Debug */,
+				5A26E8B41F8B18F10075B9C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A26E8761F8B18F00075B9C4 /* Project object */;
+}
