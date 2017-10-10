@@ -24,10 +24,13 @@ class GameViewController: UIViewController {
             if let sceneRootNode = scene.rootNode as! GameScene? {
                 sceneRootNode.scaleMode = .aspectFill
                 sceneRootNode.entities = scene.entities
+                print("Node 1 created")
                 
                 //The SKScene has to have a view to actualy display, this is the SKView which presents the scene
                 if let view = self.view as! SKView? {
                     view.ignoresSiblingOrder = true;
+                    view.showsNodeCount = true;
+                    view.showsFPS = true;
                     view.presentScene(sceneRootNode)
                 }
             }

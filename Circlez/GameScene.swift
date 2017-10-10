@@ -21,6 +21,7 @@ class GameScene: SKScene {
 
         let testBall = SKShapeNode(circleOfRadius: 20)
         self.addChild(testBall)
+
         testBall.physicsBody = SKPhysicsBody(circleOfRadius: testBall.frame.size.width/2)
         testBall.physicsBody!.restitution = 1.0
         testBall.physicsBody!.friction = 0.0
