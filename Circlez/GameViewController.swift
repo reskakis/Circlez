@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
             //Create a SKScene that the GKScene will have inside of it
             if let sceneRootNode = scene.rootNode as! GameScene? {
                 sceneRootNode.scaleMode = .aspectFill
-                sceneRootNode.entities = scene.entities
+             //   sceneRootNode.entities = scene.entities
                 print("Node 1 created")
                 
                 //The SKScene has to have a view to actualy display, this is the SKView which presents the scene
