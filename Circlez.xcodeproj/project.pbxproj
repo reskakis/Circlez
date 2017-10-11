@@ -109,18 +109,17 @@
 		5A26E8801F8B18F00075B9C4 /* Circlez */ = {
 			isa = PBXGroup;
 			children = (
+				5A26E8931F8B18F00075B9C4 /* Info.plist */,
 				5A26E9011F8DACA10075B9C4 /* BallConfigComponent.swift */,
 				5A26E8811F8B18F00075B9C4 /* AppDelegate.swift */,
-				5A26E8831F8B18F00075B9C4 /* GameScene.sks */,
-				5A26E8851F8B18F00075B9C4 /* Actions.sks */,
 				5A26E8871F8B18F00075B9C4 /* GameScene.swift */,
 				5A26E8891F8B18F00075B9C4 /* GameViewController.swift */,
 				5A26E88B1F8B18F00075B9C4 /* Main.storyboard */,
-				5A26E88E1F8B18F00075B9C4 /* Assets.xcassets */,
 				5A26E8901F8B18F00075B9C4 /* LaunchScreen.storyboard */,
-				5A26E8931F8B18F00075B9C4 /* Info.plist */,
 				5A26E8F71F8D98B40075B9C4 /* BallEntity.swift */,
 				5A26E8F91F8D98C70075B9C4 /* EntityManager.swift */,
+				5A26E88E1F8B18F00075B9C4 /* Assets.xcassets */,
+				5AD9E16B1F8DC47400AABE15 /* Animations */,
 			);
 			path = Circlez;
 			sourceTree = "<group>";
@@ -141,6 +140,15 @@
 				5A26E8A91F8B18F10075B9C4 /* Info.plist */,
 			);
 			path = CirclezUITests;
+			sourceTree = "<group>";
+		};
+		5AD9E16B1F8DC47400AABE15 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				5A26E8851F8B18F00075B9C4 /* Actions.sks */,
+				5A26E8831F8B18F00075B9C4 /* GameScene.sks */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

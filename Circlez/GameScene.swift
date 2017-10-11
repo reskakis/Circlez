@@ -13,8 +13,6 @@ class GameScene: SKScene {
     
     var entityManager: EntityManager!
    
-
-    
     override func sceneDidLoad() {
 
         let newBall = BallEntity()
@@ -23,10 +21,6 @@ class GameScene: SKScene {
         self.physicsBody = borderBody
         physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
         entityManager.add(newBall)
-
-        
-        
-      
         
     }
 }

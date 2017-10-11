@@ -18,10 +18,11 @@ class EntityManager {
         self.scene = scene
     }
     
+    //this functions under this should probably be done in the ball entity
+    
     func add(_ entity: GKEntity) {
         entities.insert(entity)
         if let ballNode = entity.component(ofType: BallConfigComponent.self)?.testBall{
-           
             scene.addChild(ballNode)
             ballNode.physicsBody!.applyImpulse(CGVector(dx: 25.0, dy: 20.0))
 

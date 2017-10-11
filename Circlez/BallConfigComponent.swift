@@ -12,6 +12,8 @@ import GameplayKit
 class BallConfigComponent: GKComponent {
     
     let testBall: SKShapeNode
+  //  var colorOfBall: String
+    
     
     override init() {
         testBall = SKShapeNode(circleOfRadius: 20)
@@ -20,7 +22,6 @@ class BallConfigComponent: GKComponent {
         testBall.physicsBody!.friction = 0.0
         testBall.physicsBody!.angularDamping = 0.0
         testBall.physicsBody!.linearDamping = 0.0
-        testBall.physicsBody!.applyImpulse(CGVector(dx: 25.0, dy: 20.0))
         super.init()
     }
     
