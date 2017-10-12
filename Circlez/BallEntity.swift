@@ -12,6 +12,8 @@ import GameplayKit
 class BallEntity: GKEntity {
     
     override init() {
+        //eventually this will take a number of balls, a ball type, color etc.
+        
         super.init()
         let newBall = BallConfigComponent()
         addComponent(newBall)
