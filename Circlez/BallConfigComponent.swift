@@ -12,18 +12,24 @@ import GameplayKit
 class BallConfigComponent: GKComponent {
     
     let ball: SKShapeNode
+    let ballBitMask: UInt32 = 0x1 << 1
     var _defaultCircleSize: CGFloat = 10.0                 //Change ball size
     
-    override init() {
+    init(ofColored: UIColor) {
         
         //use if lets here in next review
         
         ball = SKShapeNode(circleOfRadius: _defaultCircleSize)
         ball.physicsBody = SKPhysicsBody(circleOfRadius: max(ball.frame.size.width/2,ball.frame.size.height/2) )
+        ball.fillColor = ofColored
         ball.physicsBody!.restitution = 1.0
         ball.physicsBody!.friction = 0.0
         ball.physicsBody!.angularDamping = 0.0
         ball.physicsBody!.linearDamping = 0.0
+        ball.physicsBody!.linearDamping = 0.0
+        
+        ball.physicsBody!.collisionBitMask = ballBitMask
+
                 
         super.init()
     }

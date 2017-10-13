@@ -18,17 +18,28 @@ class EntityManager {
     init(scene: SKScene) {
         self.scene = scene
     }
-
+    
+    func addBall(ofColor: UIColor, numberToAdd: Int) {
+        for _ in 1...numberToAdd {
+            let initialEntity: BallEntity = BallEntity(ofColor: ofColor)
+            entities.insert(initialEntity)
+            if let ballNode = initialEntity.component(ofType: BallConfigComponent.self)?.ball {
+                scene.addChild(ballNode)
+                
+                ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 5.0, max: 10.0), dy: EntityManager.randomCGFloat(min: 5.0, max: -10.0) ))
+                
+            }
+        }
+    }
+    
+    static func randomCGFloat(min: CGFloat, max: CGFloat) -> CGFloat {
+            return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min
+    }
+    
     func setUpANewGame() {
         //To do: (make a ball color chooser at some point)
+        addBall(ofColor: UIColor.blue, numberToAdd: 3)
         
-        let initialEntity: BallEntity = BallEntity()
-        entities.insert(initialEntity)
-        
-        if let ballNode = initialEntity.component(ofType: BallConfigComponent.self)?.ball {
-            scene.addChild(ballNode)
-            ballNode.physicsBody!.applyImpulse(CGVector(dx: 10.0, dy: 10.0))
-        }
     }
 }
 

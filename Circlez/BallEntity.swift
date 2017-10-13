@@ -11,11 +11,10 @@ import GameplayKit
 
 class BallEntity: GKEntity {
     
-    override init() {
+    init(ofColor: UIColor) {
         //eventually this will take a number of balls, a ball type, color etc.
-        
         super.init()
-        let newBall = BallConfigComponent()
+        let newBall = BallConfigComponent(ofColored: ofColor)
         addComponent(newBall)
 
     }
