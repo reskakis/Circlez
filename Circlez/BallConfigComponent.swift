@@ -26,7 +26,6 @@ class BallConfigComponent: GKComponent {
         ball.physicsBody!.friction = 0.0
         ball.physicsBody!.angularDamping = 0.0
         ball.physicsBody!.linearDamping = 0.0
-        ball.physicsBody!.linearDamping = 0.0
         
         ball.physicsBody!.collisionBitMask = ballBitMask
 
