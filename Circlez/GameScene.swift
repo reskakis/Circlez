@@ -9,12 +9,12 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var entityManager: EntityManager!
-   
+    var i = 0;
+    
     override func sceneDidLoad() {
-        SKPhysicsContact.bod
         
     }
     
@@ -23,13 +23,34 @@ class GameScene: SKScene {
         setUpGLobalPropertiesForGame()
         entityManager.setUpANewGame()
     }
- 
+    
     func setUpGLobalPropertiesForGame() {
         let borderBody = SKPhysicsBody(edgeLoopFrom: self.frame)
         self.physicsBody = borderBody
-        
-        physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+        borderBody.angularDamping = 0
+        borderBody.linearDamping = 0
+        borderBody.restitution = 1
+        borderBody.friction = 0
+        borderBody.affectedByGravity = false
+        borderBody.allowsRotation = false
+        physicsWorld.contactDelegate = self
+
     }
     
-    
+    func didBegin(_ contact: SKPhysicsContact) {
+        let node = contact.bodyA.node!
+        let nodeB = contact.bodyB.node!
+        if node.name != "ball" {
+            let strength = 1.0 * (nodeB.position.x < frame.width / 2 ? 1 : -1)
+            print(nodeB.position.x)
+            print(frame.width / 2)
+            print(strength)
+            nodeB.physicsBody!.applyImpulse(CGVector(dx: strength, dy: 0))
+
+            print("elephant")
+        }
+    }
 }
+
+
+

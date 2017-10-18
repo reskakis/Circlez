@@ -24,9 +24,11 @@ class EntityManager {
             let initialEntity: BallEntity = BallEntity(ofColor: ofColor)
             entities.insert(initialEntity)
             if let ballNode = initialEntity.component(ofType: BallConfigComponent.self)?.ball {
+                ballNode.name = "ball"
+          //      balls.append(initialEntity)
                 scene.addChild(ballNode)
-                
-                ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 3.0, max: -3.0), dy: EntityManager.randomCGFloat(min: 3.0, max: -3.0) ))
+//                ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 3.0, max: -3.0), dy: EntityManager.randomCGFloat(min: 3.0, max: -3.0) ))
+                   ballNode.physicsBody!.applyImpulse(CGVector(dx: 1.0, dy: -1.0) )
                 
             }
         }
@@ -38,7 +40,7 @@ class EntityManager {
     
     func setUpANewGame() {
         //To do: (make a ball color chooser at some point)
-        addBall(ofColor: UIColor.blue, numberToAdd: 5)
+        addBall(ofColor: UIColor.blue, numberToAdd: 1)
         
     }
 }
