@@ -27,15 +27,15 @@ class EntityManager {
                 ballNode.name = "ball"
           //      balls.append(initialEntity)
                 scene.addChild(ballNode)
-//                ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 3.0, max: -3.0), dy: EntityManager.randomCGFloat(min: 3.0, max: -3.0) ))
-                   ballNode.physicsBody!.applyImpulse(CGVector(dx: 1.0, dy: -1.0) )
+       //         ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 3.0, max: -3.0), //dy: EntityManager.randomCGFloat(min: 3.0, max: -3.0) ))
+                   ballNode.physicsBody!.applyImpulse(CGVector(dx: 3.0, dy: -3.0) )
                 
             }
         }
     }
     
     static func randomCGFloat(min: CGFloat, max: CGFloat) -> CGFloat {
-            return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min
+            return ceil(CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * (max - min) + min)
     }
     
     func setUpANewGame() {

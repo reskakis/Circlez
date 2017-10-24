@@ -22,13 +22,11 @@ class BallConfigComponent: GKComponent {
         ball = SKShapeNode(circleOfRadius: _defaultCircleSize)
         ball.physicsBody = SKPhysicsBody(circleOfRadius: _defaultCircleSize)
         ball.fillColor = ofColored
-        ball.physicsBody!.isDynamic = true;
         ball.physicsBody!.restitution = 1.0
         ball.physicsBody!.friction = 0.0
         ball.physicsBody!.angularDamping = 0.0
         ball.physicsBody!.linearDamping = 0.0
-        ball.physicsBody!.allowsRotation = false
-        ball.physicsBody!.affectedByGravity = false
+        ball.physicsBody!.allowsRotation = true
         ball.physicsBody!.categoryBitMask = ballBitMask
         ball.physicsBody!.contactTestBitMask = ballBitMask
         ball.physicsBody!.collisionBitMask = ballBitMask
