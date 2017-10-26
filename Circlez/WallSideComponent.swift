@@ -17,13 +17,8 @@ class WallSideComponent: GKComponent {
         
         wallSide = SKShapeNode(rect: CGRect(x: start.x, y: start.y, width: end.x, height: end.y))
         wallSide.physicsBody = SKPhysicsBody(edgeFrom: start, to: end)
-        wallSide.physicsBody!.restitution = 1.0
-        wallSide.physicsBody!.friction = 0.0
-        wallSide.physicsBody!.angularDamping = 0.0
-        wallSide.physicsBody!.linearDamping = 0.0
-        wallSide.physicsBody!.allowsRotation = false
-        
         super.init()
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

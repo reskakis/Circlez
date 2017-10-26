@@ -44,6 +44,8 @@ class EntityManager {
     
     func addWall(toSide: String) {
         
+        print(scene.frame.origin)
+        print(scene.frame.height)
         //if left
         let wallEntity = WallEntity(type: toSide, origin: scene.frame.origin, term: CGPoint(x: 10.0, y: scene.frame.height))
         entities.insert(wallEntity)
