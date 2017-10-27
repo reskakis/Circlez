@@ -11,16 +11,16 @@ import GameplayKit
 
 class BallConfigComponent: GKComponent {
     
-    let ball: SKShapeNode
+    let ball: SKSpriteNode
     var _defaultCircleSize: CGFloat = 10.0                 //Change ball size
     
     init(ofColored: UIColor) {
         
         //use if lets here in next review
+        let ballTexture = SKTexture(imageNamed: "ball.png")
+        ball = SKSpriteNode(texture: ballTexture)
+        ball.physicsBody = SKPhysicsBody(circleOfRadius: ball.size.width/2)
         
-        ball = SKShapeNode(circleOfRadius: _defaultCircleSize)
-        ball.physicsBody = SKPhysicsBody(circleOfRadius: _defaultCircleSize)
-        ball.fillColor = ofColored
         ball.physicsBody!.restitution = 1.0
         ball.physicsBody!.friction = 0.0
         ball.physicsBody!.angularDamping = 0.0

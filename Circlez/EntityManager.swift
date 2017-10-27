@@ -32,7 +32,7 @@ class EntityManager {
                 ballNode.name = "ball"
                 //      balls.append(initialEntity)
                 scene.addChild(ballNode)
-                ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 2.0, max: -2.0), dy: EntityManager.randomCGFloat(min: 2.0, max: -2.0) ))
+                ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 0.0, max: 2.0), dy: EntityManager.randomCGFloat(min: -2.0, max: 2.0) ))
                 ballNode.position = CGPoint(x: 100.00, y: 100.00)
                 ballNode.physicsBody!.categoryBitMask = PhysicsCategory.ball
                 ballNode.physicsBody!.contactTestBitMask = PhysicsCategory.wall | PhysicsCategory.ball
@@ -77,10 +77,10 @@ class EntityManager {
     
     func setUpANewGame() {
         addBall(ofColor: UIColor.blue, numberToAdd: 5)
-        addWall(toSide: "left-wall")
-        addWall(toSide: "right-wall")
-        addWall(toSide: "top-wall")
-        addWall(toSide: "bottom-wall")
+       // addWall(toSide: "left-wall")
+       // addWall(toSide: "right-wall")
+       // addWall(toSide: "top-wall")
+       // addWall(toSide: "bottom-wall")
         
     }
 }
