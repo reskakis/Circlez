@@ -10,8 +10,8 @@ import SpriteKit
 import GameplayKit
 
 struct PhysicsCategory {
-    static let ball: UInt32 = 0x1 << 0
-    static let wall: UInt32 = 0x1 << 1
+    static let ball: UInt32 = 0x1 << 1
+    static let wall: UInt32 = 0x1 << 2
 }
 
 class EntityManager {
@@ -32,11 +32,11 @@ class EntityManager {
                 ballNode.name = "ball"
                 //      balls.append(initialEntity)
                 scene.addChild(ballNode)
-                //         ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 3.0, max: -3.0), //dy: EntityManager.randomCGFloat(min: 3.0, max: -3.0) ))
-                ballNode.physicsBody!.applyImpulse(CGVector(dx: 3.0, dy: -3.0) )
+                ballNode.physicsBody!.applyImpulse(CGVector(dx: EntityManager.randomCGFloat(min: 2.0, max: -2.0), dy: EntityManager.randomCGFloat(min: 2.0, max: -2.0) ))
+                ballNode.position = CGPoint(x: 100.00, y: 100.00)
                 ballNode.physicsBody!.categoryBitMask = PhysicsCategory.ball
-                ballNode.physicsBody!.contactTestBitMask = PhysicsCategory.ball | PhysicsCategory.wall
-                ballNode.physicsBody!.collisionBitMask = PhysicsCategory.ball | PhysicsCategory.wall
+                ballNode.physicsBody!.contactTestBitMask = PhysicsCategory.wall | PhysicsCategory.ball
+                ballNode.physicsBody!.collisionBitMask = PhysicsCategory.wall | PhysicsCategory.ball
                 
             }
         }
@@ -44,17 +44,28 @@ class EntityManager {
     
     func addWall(toSide: String) {
         
-        print(scene.frame.origin)
-        print(scene.frame.height)
-        //if left
-        let wallEntity = WallEntity(type: toSide, origin: scene.frame.origin, term: CGPoint(x: 10.0, y: scene.frame.height))
+        var wallEntity: WallEntity
+        
+        switch toSide {
+        case "left-wall":
+            wallEntity = WallEntity(type: toSide, origin: scene.frame.origin, term: CGPoint(x: 1.0, y: scene.frame.height))
+        case "right-wall":
+            wallEntity = WallEntity(type: toSide, origin: CGPoint(x: scene.frame.origin.x + scene.frame.width - 1.0, y: scene.frame.origin.y), term: CGPoint(x: 1.0, y: scene.frame.height))
+        case "top-wall":
+            wallEntity = WallEntity(type: toSide, origin: CGPoint(x: scene.frame.origin.x + 1.0, y: scene.frame.height - 1.0), term: CGPoint(x: scene.frame.width - 1.0, y: 1.0))
+        case "bottom-wall":
+            wallEntity = WallEntity(type: toSide, origin: CGPoint(x: scene.frame.origin.x + 1.0, y: scene.frame.origin.y), term: CGPoint(x: scene.frame.width - 1.0, y: 1.0))
+        default:
+            wallEntity = WallEntity(failedToBuildWall: toSide)
+        }
+        
         entities.insert(wallEntity)
         if let wallNode = wallEntity.component(ofType: WallSideComponent.self)?.wallSide {
-            wallNode.name = "left-wall"
+            wallNode.name = toSide
             scene.addChild(wallNode)
             wallNode.physicsBody!.categoryBitMask = PhysicsCategory.wall
-            wallNode.physicsBody!.contactTestBitMask = PhysicsCategory.wall | PhysicsCategory.ball
-            wallNode.physicsBody!.collisionBitMask = PhysicsCategory.wall | PhysicsCategory.ball
+            wallNode.physicsBody!.contactTestBitMask = PhysicsCategory.ball
+            wallNode.physicsBody!.collisionBitMask = PhysicsCategory.ball
             
         }
         
@@ -65,9 +76,11 @@ class EntityManager {
     }
     
     func setUpANewGame() {
-        //To do: (make a ball color chooser at some point)
-        addWall(toSide: "left")
-        addBall(ofColor: UIColor.blue, numberToAdd: 1)
+        addBall(ofColor: UIColor.blue, numberToAdd: 5)
+        addWall(toSide: "left-wall")
+        addWall(toSide: "right-wall")
+        addWall(toSide: "top-wall")
+        addWall(toSide: "bottom-wall")
         
     }
 }

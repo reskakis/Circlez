@@ -13,7 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var entityManager: EntityManager!
     var i = 0;
-
+    
     override func sceneDidLoad() {
         
     }
@@ -32,11 +32,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
-        print("contact was made")
+        let nodeA = contact.bodyA.node
+        let nodeB = contact.bodyB.node
+        
+        if nodeA?.name == "left-wall" {
+            nodeB?.physicsBody!.applyImpulse(CGVector(dx: 0.0001, dy: 0.0))
+            print("hit left")
+        }
+        if nodeA?.name == "right-wall" {
+            nodeB?.physicsBody!.applyImpulse(CGVector(dx: -0.0001, dy: 0.0))
+            print("hit right")
+        }
+        if nodeA?.name == "top-wall" {
+            nodeB?.physicsBody!.applyImpulse(CGVector(dx: 0.0, dy: -0.0001))
+            print("hit top")
+        }
+        if nodeA?.name == "bottom-wall" {
+            nodeB?.physicsBody!.applyImpulse(CGVector(dx: 0.0, dy: 0.0001))
+            print("hit bottom")
+        }
     }
     
- 
-
+    
+    
 }
 
 

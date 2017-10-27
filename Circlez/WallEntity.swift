@@ -19,6 +19,12 @@ class WallEntity: GKEntity {
         
     }
     
+    init(failedToBuildWall: String) {
+        print("Failed to build wall:")
+        print(failedToBuildWall)
+        super.init()
+    }
+    
     //To look up what this does below...
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

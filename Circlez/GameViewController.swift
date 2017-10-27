@@ -18,21 +18,14 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         //Create a new GK Scene (this is like the high level container)
-        if let scene = GKScene(fileNamed: "GameScene") {
-            
-            //Create a SKScene that the GKScene will have inside of it
-            if let sceneRootNode = scene.rootNode as! GameScene? {
-                sceneRootNode.scaleMode = .resizeFill
-                sceneRootNode.anchorPoint = CGPoint(x: 0.0, y: 0.0)
-                
-                //The SKScene has to have a view to actualy display, this is the SKView which presents the scene
-                if let view = self.view as! SKView? {
-                    view.ignoresSiblingOrder = true;
-                    view.showsNodeCount = true;
-                    view.showsFPS = true;
-                    view.presentScene(sceneRootNode)
-                }
-            }
-        }
+        let scene = GameScene(size: view.bounds.size)
+        scene.scaleMode = .aspectFill
+        let skView = self.view as! SKView
+        skView.ignoresSiblingOrder = true;
+        skView.showsNodeCount = true;
+        skView.showsFPS = true;
+        skView.presentScene(scene)
+        
     }
 }
+
